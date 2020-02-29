@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a multi-line script in self hosted
+      run: |
+        echo log in self hosted runner
+        cat /etc/issue
